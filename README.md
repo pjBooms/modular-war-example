@@ -13,7 +13,7 @@ That is because currently Tomcat loads all dependencies of a web application int
 they are packed as Jigsaw modules.
 What does it mean? It means that even if you split your web application into Jigsaw modules you cannot fully enjoy what
 Jigsaw offers to you: Reliable Configuration and Strong Encapsulation.
-Thus if you do not put a required module into the war file or access a non-eported functionality of another module,
+Thus if you do not put a required module into the war file or access a non-exported functionality of another module,
 nobody will catch you at runtime.
 
 ### How to load modules of your web application as Jigsaw modules in runtime?
@@ -36,7 +36,7 @@ If you want to benefit from Jigsaw for your web application running on Tomcat (y
 ```
 
 3. Rename `/WEB-INF/lib` to `/WEB-INF/modules` in the target folder
-   (`/WEB-INF/modules` is analog of module path for war file in my fork)
+   (`/WEB-INF/modules` is analog of module path for war files in my fork)
 ```
     cd helloworld-web-app/target/helloworld-web-app-1.0-SNAPSHOT/WEB-INF
     mv lib modules
